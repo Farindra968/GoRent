@@ -5,6 +5,8 @@ import { FaBell } from "react-icons/fa";
 import profile from "@/assets/images/profile.png";
 import React from "react";
 import Image from "next/image";
+import config from "@/config/config";
+import AppName from "../UI/AppName";
 
 const Header = () => {
   return (
@@ -12,9 +14,7 @@ const Header = () => {
       <section className="flex justify-between items-center p-6 max-w-screen-xl mx-auto">
         <div className="w-full flex justify-start items-center space-x-6">
           {/* website logo */}
-          <h1 className="font-Poppins-Bold text-xl tracking-wider text-primary-500">
-            GORENT
-          </h1>
+          <AppName/>
           <div className="flex items-center  lg:w-1/3 border border-secondary-200 h-auto rounded-xl px-4">
             <CiSearch className="text-2xl text-secondary-400" />
             <input
