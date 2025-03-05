@@ -1,17 +1,17 @@
 import ProductFilter from "@/components/products/ProductFilter"
+import { HIDE_PRODUCTFILTER } from "@/constant/switcher"
 
 export const metadata = {
     title: 'Product',
     description: 'Get Rent car at affordable price'
 }
 
-const Product = ({children}) => {
+const ProductDetails = ({children}) => {
   return (
-    <section className="flex justify-start items-start space-x-4">
-      <ProductFilter/>
+    <section className="w-full">
           {children}
     </section>
   )
 }
 
-export default Product
+export default ProductDetails

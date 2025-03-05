@@ -36,7 +36,7 @@ const AddressPicker = () => {
             />
           </div>
           <div className="  px-3">
-            <Label htmlFor="pickup-time" label="time" />
+            <Label htmlFor="pickup-time" label="Time" />
             <input
               type="time"
               id="pickup-time"
@@ -77,7 +77,7 @@ const AddressPicker = () => {
             />
           </div>
           <div className=" px-3">
-            <Label htmlFor="dropoff-time" label="time" />
+            <Label htmlFor="dropoff-time" label="Time" />
             <input
               type="time"
               id="dropoff-time"

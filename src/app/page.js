@@ -3,6 +3,7 @@ import HeroSection from "@/components/home/HeroSection";
 import ProductCard from "@/components/products/ProductCard";
 import Button from "@/components/UI/Button";
 import Title from "@/components/UI/Title";
+import { PRODUCT_ROUTE } from "@/constant/routes";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
       <HeroSection />
       <AddressPicker />
       <div className="max-w-screen-xl mx-auto px-4 py-3">
-        <Title title="Popular car" href={`/`} />
+        <Title title="Popular car" href={`${PRODUCT_ROUTE}`} />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  xl:grid-cols-4 gap-6 py-6">
           <ProductCard />
           <ProductCard />

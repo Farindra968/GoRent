@@ -4,7 +4,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <section className="max-w-screen-xl mx-auto">
+    <section className="px-4">
       <ProductList/>
     </section>
   );

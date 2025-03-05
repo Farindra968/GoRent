@@ -1,6 +1,8 @@
 "use client";
+import { HIDE_PRODUCTFILTER } from "@/constant/switcher";
 import React, { useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
+import { useSelector } from "react-redux";
 
 const ProductFilter = () => {
   const type = [
@@ -48,8 +50,10 @@ const ProductFilter = () => {
     },
   ];
 
+  const { productSidebar } = useSelector((state) => state.filterSidebar)
+
   return (
-    <div className="p-6">
+    <div className={`${productSidebar === HIDE_PRODUCTFILTER ? "w-80 hidden lg:block z-30 h-full bg-primary-0 p-6 " : " hidden"}`}>
       <h4 className="font-Poppins-SemiBold text-xl text-secondary-500">
         Filter
       </h4>
@@ -60,7 +64,7 @@ const ProductFilter = () => {
             key={index}
             className="flex justify-start items-center gap-2  font-Poppins-Medium py-1 text-secondary-400"
           >
-            <input type="checkbox" className="appearance-none w-5 h-5 flex justify-center items-center text-sm rounded-md border border-primary-300 checked:bg-primary-500 checked:text-white checked:before:content-['✔']" />
+            <input type="checkbox" className="appearance-none w-5 h-5 flex justify-center items-center text-sm rounded-md border border-primary-500 checked:bg-primary-500 checked:text-white checked:before:content-['✔']" />
             <p>
               {type.label}
               <span className="text-secondary-300"> ({type.value})</span>
@@ -75,7 +79,7 @@ const ProductFilter = () => {
             key={index}
             className="flex justify-start items-center gap-2 font-Poppins-Medium py-1 text-secondary-400"
           >
-                <input type="checkbox" className="appearance-none w-5 h-5 flex justify-center items-center text-sm rounded-md border border-primary-300 checked:bg-primary-500 checked:text-white checked:before:content-['✔']" />
+                <input type="checkbox" className="appearance-none w-5 h-5 flex justify-center items-center text-sm rounded-md border border-primary-500 checked:bg-primary-500 checked:text-white checked:before:content-['✔']" />
             <p>
               {person.person}
               <span className="text-secondary-300"> ({person.value})</span>
@@ -88,7 +92,7 @@ const ProductFilter = () => {
         <div className="flex justify-start items-center gap-2 font-Poppins-Medium py-1 text-secondary-400">
           <input
             type="range"
-            className="w-full appearance-none bg-primary-100 rounded-lg h-1 cursor-pointer 
+            className="w-full appearance-none bg-primary-200 rounded-lg h-1 cursor-pointer 
 "
           />
         </div>
